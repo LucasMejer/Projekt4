@@ -1,0 +1,16 @@
+.sidelogo{
+    max-width: 25vw;
+    max-height: 25vh;
+}
+
+#logoFade{
+    opacity: 0;
+    -webkit-transition: opacity 0.3;
+    -moz-transition: opacity 0.3;
+    -o-transition: opacity 0.3;
+    transition: opacity 0.3;
+}
+
+#logoFade.fade{
+    opacity: 1;
+}

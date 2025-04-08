@@ -1,5 +1,8 @@
 /* Header Menu Kode */
 let menuVariable = document.getElementById("menuUL");
+let logoFade = document.getElementById("logoFade");
+
+
 
 const menuItems = [
     {
@@ -27,3 +30,10 @@ const menuItems = [
 for(let i = 0; i < menuItems.length; i++){
     menuVariable.innerHTML += "<l>" + "<a href=" + menuItems[i].link + ">" + menuItems[i].displayName + "</a>" + "</l>";
 }
+
+setTimeout(codingCourse, 3000);
+
+function codingCourse() {
+    logoFade.classList.toggle("fade");
+}
+

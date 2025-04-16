@@ -3,6 +3,10 @@
 :root {
     --purple: #68237C;
     --grey: #F1F1F1;
+    --main-bg-color: #ffffff;
+    --secondary-bg-color: #242424;
+    --main-text-color: #000000;
+    --main-text-font: sans-serif;
 }
 
 * {

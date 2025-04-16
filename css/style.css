@@ -56,7 +56,7 @@ nav a {
     left: 5%;
     width: 40%;
     background: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
 }
 
@@ -69,13 +69,6 @@ h1 {
 .search-container p {
     color: #444;
     margin-bottom: 1.5rem;
-}
-
-.search-bar {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 5px;
-    border: none;
 }
 
 .login-section {

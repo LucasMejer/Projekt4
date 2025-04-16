@@ -89,8 +89,9 @@ h1 {
 .input-group {
     display: grid;
     gap: 1rem;
-    max-width: 400px;
     margin: 2rem auto;
+    max-width: 500px;
+    width: 90%;
 }
 
 input {
@@ -127,6 +128,7 @@ input {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
+    width: auto;
 }
 
 footer {
@@ -168,11 +170,6 @@ footer {
 }
 
 /* Nye styles til registreringsside */
-.form-container {
-    padding: 2rem 5%;
-    max-width: 600px;
-    margin: 0 auto;
-}
 
 .username-warning {
     color: #666;
@@ -199,6 +196,18 @@ footer {
     position: absolute;
     left: -1.2rem;
     font-size: 1.2rem;
+}
+
+.input-group input,
+.input-group .btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container .input-group {
+    max-width: 500px;
+    width: 90%;
+    margin: 2rem auto;
 }
 
 @media (min-width: 768px) {

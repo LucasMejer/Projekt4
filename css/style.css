@@ -708,7 +708,7 @@ body {
   
   /* KONTAKT SIDE STORE SKÆRME */
   
-  @media(min-width:700px){
+  @media(min-width:768px){
     .contact__wrapper{
       display: grid;
       grid-template-columns: 1fr 2fr;

@@ -720,8 +720,6 @@ footer {
     justify-content: flex-end;
 }
 
-
-
 .social-link .social-icon {
   width: 40px; 
   transition: transform 0.3s ease, opacity 0.3s ease;

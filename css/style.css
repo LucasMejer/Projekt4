@@ -432,6 +432,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    text-align: center;
     margin: auto;
     gap: 45px;
 }

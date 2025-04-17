@@ -41,11 +41,9 @@ for(let i = 0; i < menuItems.length; i++){
 let medalText1 = document.getElementById("medalText1");
 let medalText2 = document.getElementById("medalText2");
 let medalText3 = document.getElementById("medalText3");
+//hey lukas de tre herunder fucker med faq siden.
 
-medalText1.style.display = "none";
-medalText2.style.display = "none";
-medalText3.style.display = "none";
-
+//hey lukas de tre herover fucker med faq siden.
 function medal1Event() {
   if(medalText1.style.display == "none"){
     medalText1.style.display = "block";

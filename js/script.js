@@ -25,6 +25,10 @@ const menuItems = [
         link: "faq.html"
     }, 
     {
+      displayName: "Kontakt OS",
+      link: "Kontakt.html"
+    },
+    {
         displayName: "Profil",
         link: "profile.html"
     },
@@ -32,6 +36,7 @@ const menuItems = [
       displayName: "Login",
       link: "log%20in.html"
     },
+   
 ];
 
 for(let i = 0; i < menuItems.length; i++){

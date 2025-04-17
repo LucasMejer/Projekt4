@@ -913,7 +913,7 @@ footer {
 /* Chat Button Block */
 .chat-button {
     position: fixed;
-    bottom: 30px;
+    bottom: 80px;
     right: 30px;
     width: 60px;
     height: 60px;
@@ -946,7 +946,7 @@ footer {
 .chat-modal {
     display: none;
     position: fixed;
-    bottom: 100px;
+    bottom: 150px;
     right: 30px;
     width: 350px;
     height: 500px;

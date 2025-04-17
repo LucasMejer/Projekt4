@@ -1,4 +1,3 @@
-
 /* Johannes CSS Starter Her */
 :root {
     --purple: #68237C;
@@ -19,7 +18,6 @@
 
 body {
     min-height: 100vh;
-    display: flex;
     flex-direction: column;
 }
 
@@ -856,15 +854,16 @@ footer {
 }
 
 .hero__slide--1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Billede1KirkensKorshærPåske.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Billede1KirkensKorshærPåske.jpg');
+    background-color: #68237C;
 }
 
 .hero__slide--2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Billede2KirkensKorshærFrivillig.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Billede2KirkensKorshærFrivillig.jpg');
 }
 
 .hero__slide--3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Billede3KirkensKorshærOmOs.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Billede3KirkensKorshærOmOs.jpg');
 }
 
 .hero__content {
@@ -968,11 +967,11 @@ footer {
 }
 
 .volunteer__slide--1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Billede1KirkensKorshærPåske.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Billede1KirkensKorshærPåske.jpg');
 }
 
 .volunteer__slide--2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Billede2KirkensKorshærFrivillig.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/Billede2KirkensKorshærFrivillig.jpg');
 }
 
 .volunteer__content {

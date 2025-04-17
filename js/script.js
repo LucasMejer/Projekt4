@@ -319,3 +319,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 // Long JS slutter her //
+
+// Johannes JS starte her //
+
+// DOM elementer (Variabler og typer)
+const loginForm = document.querySelector('.login-form');
+const emailInput = document.querySelector('input[type="text"]');
+const passwordInput = document.querySelector('input[type="password"]');
+
+// Event listener (Events)
+loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Operatorer (&&)
+    if(emailInput.value.trim() === '' || passwordInput.value === '') {
+        showError('Begge felter skal udfyldes!');
+        return;
+    }
+    
+    // Simpel validering (if-else)
+    if(!checkCredentials()) {
+        showError('Forkert kode eller brugernavn/email');
+    }
+});
+
+// Funktioner
+function checkCredentials() {
+    // Simpel dummy check (skal erstattes med rigtig logik)
+    return emailInput.value === 'test@example.com' && passwordInput.value === '1234';
+}
+
+function showError(message) {
+    // DOM manipulation
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.textContent = message;
+    
+    // Fjern eksisterende fejl
+    const existingError = document.querySelector('.error-message');
+    if(existingError) existingError.remove();
+    
+    // Indsæt efter formularen
+    loginForm.parentNode.insertBefore(errorDiv, loginForm.nextSibling);
+}
+
+// Johannes JS slutter her //

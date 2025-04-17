@@ -512,3 +512,224 @@ footer {
 
 
 /* Lucas CSS Slutter Her */
+
+/* Nikolajs CSS starter her */
+
+body {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    line-height: 1.6;
+  }
+
+  .contact{
+    background: var(--main-bg-color);
+    line-height: 1.6;
+    padding: 1em;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact__info > ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact__brand{
+    text-align: center;
+    color: var(--main-text-color);
+    font-family: var(--main-text-font);
+    
+  }
+  
+  .contact__wrapper{
+    box-shadow: 0 0 20px 0 rgba(156, 156, 156, 0.7);
+    
+  }
+  
+  .contact__wrapper > *{
+    padding: 1em;
+  }
+  
+  .contact__info{
+    background: #bfbfbf;
+    color: var(--main-text-color);
+    font-family: var(--main-text-font);
+  }
+  
+  .contact__info h3, .contact__info ul{
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  
+  .contact__form{
+    background: #f1f1f1;
+    color: var(--main-text-color);
+    font-family: var(--main-text-font);
+  }
+  
+  .contact__form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+  }
+  
+  .contact__form label{
+    display: block;
+    }
+    .contact__form p{
+      margin: 0;
+    }
+  
+  .contact__form .fuld{
+    grid-column: 1 / 3;
+  }
+  .contact__form .button{
+    grid-column: 1 / 3;
+  }
+  .contact__form button, .contact__form input, .contact__form textarea{
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    
+  }
+  
+  .contact__form button{
+  background: #662483;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  }
+  
+
+  
+  /* KONTAKT SIDE STORE SKÆRME */
+  
+  @media(min-width:700px){
+    .contact__wrapper{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  
+    .contact__wrapper > *{
+      padding: 2em;
+    }
+  
+    .contact__info h3, .contact__info ul, .contact__brand{
+      text-align: left;
+    }
+  }
+  
+  
+
+/* FAQ */
+.faq-section {
+  max-width: 1170px;
+  margin: 2em auto;
+  padding: 1em;
+  font-family: var(--main-text-font, sans-serif);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+.faq-section h1 {
+  text-align: center;
+  color: #662483;
+  margin-bottom: 1.5em;
+  font-size: 3rem;
+}
+
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0;
+  padding: 1.5em;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question:hover {
+  background-color: #d0d0d0;
+}
+
+.faq-answer {
+  display: none;
+  margin-left: 15px;
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #ffffff;
+  border-left: 3px solid #999;
+  border-radius: 3px;
+  color: var(--main-text-color);
+}
+
+/* FAQ SIDE STORE SKÆRME */
+
+@media(min-width: 768px) {
+  .faq-section{
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+  }
+  .faq-question{
+    padding: 1.5em;
+    font-size: 1.2em;
+  }
+}
+
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #eeeeee;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  text-align: right;
+}
+
+.footer-content {
+    display: flex;
+    gap: 15px;
+    width: 70%; 
+}
+
+.footer-column {
+    color: rgb(0, 0, 0);
+    flex: 1; 
+    padding: 10px;
+    font-family: var(--main-text-font);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+
+
+.social-link .social-icon {
+  width: 40px; 
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon {
+  width: 40px; 
+  fill: rgb(0, 0, 0);
+  transition: fill 0.3s ease;
+}
+
+
+.social-link:hover .social-icon {
+  fill: #662483; 
+}
+/*nikolajs css slutter her*/

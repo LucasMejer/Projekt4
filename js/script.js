@@ -6,29 +6,73 @@ let logoFade = document.getElementById("logoFade");
 const menuItems = [
     {
         displayName: "Forside",
-        link: "Indsæt html her"
+        link: "projekt4forside.html"
     },
+    {
+        displayName: "Om os",
+        link: "about.html"
+    },
+    {
+        displayName: "Frivilligt Arbejde",
+        link: "feed.html"
+    },
+    {
+        displayName: "Scoreboard",
+        link: "scoreboard.html"
+    },   
+    {
+        displayName: "FAQ",
+        link: "faq.html"
+    }, 
     {
         displayName: "Profil",
-        link: "Indsæt html her"
+        link: "profile.html"
     },
     {
-        displayName: "Jobs",
-        link: "Indsæt html her"
-    },
-    {
-        displayName: "Leaderboards",
-        link: "Indsæt html her"
-    },    
-    {
-        displayName: "Kontakt os",
-        link: "Indsæt html her"
+      displayName: "Login",
+      link: "log%20in.html"
     },
 ];
 
 for(let i = 0; i < menuItems.length; i++){
     menuVariable.innerHTML += "<l>" + "<a href=" + menuItems[i].link + ">" + menuItems[i].displayName + "</a>" + "</l>";
 }
+
+let medalText1 = document.getElementById("medalText1");
+let medalText2 = document.getElementById("medalText2");
+let medalText3 = document.getElementById("medalText3");
+
+medalText1.style.display = "none";
+medalText2.style.display = "none";
+medalText3.style.display = "none";
+
+function medal1Event() {
+  if(medalText1.style.display == "none"){
+    medalText1.style.display = "block";
+  }
+  else{
+    medalText1.style.display = "none";
+  }
+}
+
+function medal2Event() {
+  if(medalText2.style.display == "none"){
+    medalText2.style.display = "block";
+  }
+  else{
+    medalText2.style.display = "none";
+  }
+}
+
+function medal3Event() {
+  if(medalText3.style.display == "none"){
+    medalText3.style.display = "block";
+  }
+  else{
+    medalText3.style.display = "none";
+  }
+}
+
 //Lucas Kode Slutter Her
 
 

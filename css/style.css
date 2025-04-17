@@ -390,6 +390,22 @@ input {
     font-size: 1.2rem;
 }
 
+/* Nye styles til javascript på log in side */
+
+.error-message {
+    color: red;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid red;
+    border-radius: 5px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (min-width: 768px) {
     .form-container {
         padding: 4rem 5%;

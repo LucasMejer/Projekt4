@@ -37,7 +37,7 @@ const menuItems = [
 for(let i = 0; i < menuItems.length; i++){
     menuVariable.innerHTML += "<l>" + "<a href=" + menuItems[i].link + ">" + menuItems[i].displayName + "</a>" + "</l>";
 }
-
+//hey lukas noget af din kode herunder fucker med faq siden.
 let medalText1 = document.getElementById("medalText1");
 let medalText2 = document.getElementById("medalText2");
 let medalText3 = document.getElementById("medalText3");

@@ -304,6 +304,20 @@ document.addEventListener('DOMContentLoaded', function() {
   initSlideshows();
   setupChat();
 });
+
+    // Back Button funktionalitet
+    const backButton = document.querySelector('.chat__back-button');
+    if (backButton) {
+        backButton.addEventListener('click', function() {
+            // While loop eksempel
+            let counter = 3;
+            while (counter > 0) {
+                console.log(`Returnerer tilbage om ${counter} sekunder`);
+                counter--;
+            }
+            window.history.back();
+        });
+    }
 // Long JS slutter her //
 
 // Johannes JS starte her //

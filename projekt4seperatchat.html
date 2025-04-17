@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt 4 Separat Chatside</title>
+    <link rel="stylesheet" href="styleslong.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="chatscript.js"></script>
+</head>
+
+<body class="body">
+    <div class="chat">
+        <!-- Venstre side med chat-liste -->
+        <div class="chat__sidebar">
+            <div class="chat__header">
+                <button class="chat__back-button">←</button>
+                <h2>Beskeder</h2>
+            </div>
+            <div class="chat__list">
+                <!-- Chat 1 -->
+                <div class="chat__list-item chat__list-item--active" data-chat-id="1">
+                    <div class="chat__avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profilbillede" class="chat__avatar-img">
+                    </div>
+                    <div class="chat__info">
+                        <h3 class="chat__contact-name">Anna Larsen</h3>
+                        <p class="chat__last-message">Tak for din hjælp!</p>
+                        <p class="chat__message-time">10:45</p>
+                    </div>
+                </div>
+                
+                <!-- Chat 2 -->
+                <div class="chat__list-item" data-chat-id="2">
+                    <div class="chat__avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profilbillede" class="chat__avatar-img">
+                    </div>
+                    <div class="chat__info">
+                        <h3 class="chat__contact-name">Mikkel Hansen</h3>
+                        <p class="chat__last-message">Hvornår kan vi mødes?</p>
+                        <p class="chat__message-time">I går</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat Vindue - Højre Side -->
+        <div class="chat__main">
+            <!-- Chat 1 -->
+            <div class="chat__window chat__window--active" data-chat-id="1">
+                <div class="chat__header">
+                    <div class="chat__partner">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profilbillede" class="chat__partner-avatar">
+                        <h3>Anna Larsen</h3>
+                    </div>
+                </div>
+                <div class="chat__messages">
+                    <div class="chat__message chat__message--received">
+                        <p>Hej! Jeg vil gerne høre mere om jeres frivilligprogram.</p>
+                        <span class="chat__message-time">10:30</span>
+                    </div>
+                    <div class="chat__message chat__message--sent">
+                        <p>Selvfølgelig, Anna! Hvad vil du gerne vide?</p>
+                        <span class="chat__message-time">10:32</span>
+                    </div>
+                    <div class="chat__message chat__message--received">
+                        <p>Jeg er interesseret i at hjælpe med maduddelinger. Hvornår sker det?</p>
+                        <span class="chat__message-time">10:40</span>
+                    </div>
+                    <div class="chat__message chat__message--sent">
+                        <p>Vi har maduddelinger hver torsdag fra 16-18. Vil det passe for dig?</p>
+                        <span class="chat__message-time">10:42</span>
+                    </div>
+                    <div class="chat__message chat__message--received">
+                        <p>Det lyder perfekt! Tak for din hjælp!</p>
+                        <span class="chat__message-time">10:45</span>
+                    </div>
+                </div>
+                <div class="chat__input">
+                    <input type="text" class="chat__input-field" placeholder="Skriv en besked...">
+                    <button class="chat__send-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

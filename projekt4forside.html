@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt 4</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <!-- Hero-slideshow -->
+    <section class="hero">
+        <div class="hero__slides">
+            <!-- Slide 1 -->
+            <div class="hero__slide hero__slide--1 hero__slide--active">
+                <div class="hero__content">
+                    <h1 class="hero__title">VELKOMMEN TIL KIRKENS KORSHÆR</h1>
+                    <p class="hero__subtitle">Vi skaber håb og muligheder for dem, der har mest brug for det</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero__slide hero__slide--2">
+                <div class="hero__content">
+                    <h1 class="hero__title">BLIV FRIVILLIG</h1>
+                    <p class="hero__subtitle">Mød fantastiske mennesker og gør en forskel sammen med os</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero__slide hero__slide--3">
+                <div class="hero__content">
+                    <h1 class="hero__title">OM OS</h1>
+                    <p class="hero__subtitle">Her kan du læse om Kirkens Korshær og vores værdier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projekter-sektion -->
+    <section class="projects">
+        <div class="projects__count">
+            <span class="projects__highlight">27</span>
+            <span class="projects__description">Igangværende Projekter</span>
+        </div>
+        <div class="projects__count">
+            <span class="projects__highlight">132</span>
+            <span class="projects__description">Fuldførte Projekter</span>
+        </div>
+    </section>
+
+    <section class="volunteer">
+        <div class="volunteer__text">
+            <h2 class="volunteer__title">Frivillig Arbejdsmuligheder</h2>
+            <p class="volunteer__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        
+        <!-- Arbejde slideshow -->
+        <div class="volunteer__slideshow">
+            <div class="volunteer__slides">
+                <!-- Slide 1 -->
+                <div class="volunteer__slide volunteer__slide--1 volunteer__slide--active">
+                    <div class="volunteer__content">
+                        <h3 class="volunteer__slide-title">Mulighed 1</h3>
+                        <p class="volunteer__slide-text">Mulighed 1</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="volunteer__slide volunteer__slide--2">
+                    <div class="volunteer__content">
+                        <h3 class="volunteer__slide-title">Mulighed 2</h3>
+                        <p class="volunteer__slide-text">Mulighed 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Chat Button -->
+    <button id="liveChatButton" class="chat-button">
+        <img src="https://img.icons8.com/ios11/512/FFFFFF/whatsapp.png" alt="Chat" class="chat-button__icon" width="30">
+    </button>
+    
+    <!-- Chat Modal -->
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-modal__header">
+            <h3>Support Chat</h3>
+            <button class="chat-modal__close-button">&times;</button>
+        </div>
+        <div class="chat-modal__body">
+            <div class="chat-modal__messages"></div>
+            <div class="chat-modal__input">
+                <input type="text" class="chat-modal__input-field" placeholder="Skriv din besked...">
+                <button class="chat-modal__send-button">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

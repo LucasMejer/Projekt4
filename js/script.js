@@ -130,3 +130,131 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //nikolajs js slutter her
+
+// Long JS Starter her //
+document.addEventListener('DOMContentLoaded', function() {
+  // Debugging - viser at scriptet er loaded
+  console.log('Script loaded successfully');
+
+  // Variabler og typer
+  const heroSlides = document.querySelectorAll('.hero__slide');
+  const volunteerSlides = document.querySelectorAll('.volunteer__slide');
+  let globalCounter = 0; // Global variabel til demonstration af scope
+
+  // Arrays
+  const slideIntervals = [5000, 5000]; // Intervaller for hvert slideshow
+
+  // Objekter
+  const slideshows = {
+      hero: {
+          element: document.querySelector('.hero__slides'),
+          slides: heroSlides,
+          currentIndex: 0,
+          interval: slideIntervals[0]
+      },
+      volunteer: {
+          element: document.querySelector('.volunteer__slides'),
+          slides: volunteerSlides,
+          currentIndex: 0,
+          interval: slideIntervals[1]
+      }
+  };
+
+  // Funktioner
+  function showNextSlide(slideshow) {
+      // If-else kontrolstruktur
+      if (!slideshow || !slideshow.slides) {
+          console.error('Invalid slideshow object');
+          return;
+      }
+
+      // Operatorer - beregn næste slide med modulus
+      slideshow.currentIndex = (slideshow.currentIndex + 1) % slideshow.slides.length;
+      
+      // DOM manipulation - flyt slideshow
+      const translateX = slideshow === slideshows.hero ? 
+          -slideshow.currentIndex * 33.333 : 
+          -slideshow.currentIndex * 50;
+      slideshow.element.style.transform = `translateX(${translateX}%)`;
+
+      // Loop - log status for alle slides
+      for (let i = 0; i < slideshow.slides.length; i++) {
+          console.log(`Slide ${i}: ${i === slideshow.currentIndex ? 'active' : 'inactive'}`);
+      }
+
+      globalCounter++; // Ændrer global variabel
+      console.log(`Global counter: ${globalCounter}`);
+  }
+
+  // Start slideshows
+  function initSlideshows() {
+      Object.values(slideshows).forEach(slideshow => {
+          setInterval(() => showNextSlide(slideshow), slideshow.interval);
+      });
+  }
+
+  // Chat funktionalitet
+  function setupChat() {
+      const chatButton = document.getElementById('liveChatButton');
+      const chatModal = document.getElementById('chatModal');
+      
+      if (!chatButton || !chatModal) return;
+
+      const closeButton = chatModal.querySelector('.chat-modal__close-button');
+      const sendButton = chatModal.querySelector('.chat-modal__send-button');
+      const messageInput = chatModal.querySelector('.chat-modal__input-field');
+      const messagesContainer = chatModal.querySelector('.chat-modal__messages');
+
+      // Event listeners
+      chatButton.addEventListener('click', toggleChat);
+      closeButton.addEventListener('click', toggleChat);
+      sendButton.addEventListener('click', sendMessage);
+      messageInput.addEventListener('keypress', e => e.key === 'Enter' && sendMessage());
+
+      function toggleChat() {
+          chatModal.style.display = chatModal.style.display === 'flex' ? 'none' : 'flex';
+      }
+
+      function sendMessage() {
+          const message = messageInput.value.trim();
+          
+          // If-else med strenglængde check
+          if (message.length === 0) {
+              alert('Indtast venligst en besked');
+              return;
+          }
+          
+          if (message.length > 100) {
+              alert('Beskeden er for lang (max 100 tegn)');
+              return;
+          }
+
+          addMessage('Dig', message, 'user-message');
+          messageInput.value = '';
+          
+          // Simuler svar fra support
+          setTimeout(() => {
+              const responses = [
+                  "Tak for din besked!",
+                  "Vi vender tilbage hurtigst muligt.",
+                  "Har du brug for yderligere hjælp?"
+              ];
+              const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+              addMessage('Support', randomResponse, 'support-message');
+          }, 1000 + Math.random() * 2000);
+      }
+
+      function addMessage(sender, text, className) {
+          const messageElement = document.createElement('div');
+          messageElement.classList.add('message', className);
+          messageElement.innerHTML = `<strong>${sender}:</strong> ${text}`;
+          messagesContainer.appendChild(messageElement);
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+  }
+
+  // Starter Funktionaliteten for Slideshows og Chat
+  initSlideshows();
+  setupChat();
+});
+// Long JS slutter her //

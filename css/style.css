@@ -406,6 +406,43 @@ input {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Nye styles til js på feed side */
+
+/* Kort animationer */
+.card {
+    transition: all 0.3s ease !important;
+    position: relative;
+    transform-origin: center;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(104, 35, 124, 0.2);
+}
+
+.fa-heart, .fa-share {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    color: #68237c;
+}
+
+.fa-heart:hover, .fa-share:hover {
+    transform: scale(1.2);
+}
+
+.fa-heart.active {
+    color: #ff4081 !important;
+    animation: heartBeat 0.6s;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.3); }
+    40% { transform: scale(0.9); }
+    60% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
 @media (min-width: 768px) {
     .form-container {
         padding: 4rem 5%;

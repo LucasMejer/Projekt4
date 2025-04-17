@@ -349,4 +349,44 @@ function showError(message) {
     loginForm.parentNode.insertBefore(errorDiv, loginForm.nextSibling);
 }
 
+/* JS til feed side */
+
+document.querySelectorAll('.card').forEach(card => {
+  // Hover effekt
+  card.addEventListener('mouseenter', () => {
+      card.style.transform = 'scale(1.03)';
+      card.style.boxShadow = '0 8px 16px rgba(104, 35, 124, 0.2)';
+  });
+  
+  card.addEventListener('mouseleave', () => {
+      card.style.transform = 'scale(1)';
+      card.style.boxShadow = 'none';
+  });
+
+  // Hjerte-ikon klik
+  const heartIcon = card.querySelector('.fa-heart');
+  if(heartIcon) {
+      heartIcon.addEventListener('click', () => {
+          heartIcon.classList.toggle('active');
+      });
+  }
+});
+
+// Sorteringsfunktion
+document.querySelector('.sort-btn').addEventListener('click', () => {
+  const cardGrid = document.querySelector('.card-grid');
+  const cards = Array.from(cardGrid.children);
+
+  // Sorter alfabetisk
+  cards.sort((a, b) => {
+      const titleA = a.querySelector('h2').textContent.toLowerCase();
+      const titleB = b.querySelector('h2').textContent.toLowerCase();
+      return titleA.localeCompare(titleB, 'da');
+  });
+
+  // Opdater DOM
+  cardGrid.innerHTML = ''; // Fjern alle kort
+  cards.forEach(card => cardGrid.appendChild(card)); // Tilføj sorterede kort
+});
+
 // Johannes JS slutter her //

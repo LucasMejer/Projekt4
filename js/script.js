@@ -6,7 +6,7 @@ let logoFade = document.getElementById("logoFade");
 const menuItems = [
     {
         displayName: "Forside",
-        link: "projekt4forside.html"
+        link: "Index.html"
     },
     {
         displayName: "Om os",
@@ -46,9 +46,7 @@ for(let i = 0; i < menuItems.length; i++){
 let medalText1 = document.getElementById("medalText1");
 let medalText2 = document.getElementById("medalText2");
 let medalText3 = document.getElementById("medalText3");
-//hey lukas de tre herunder fucker med faq siden.
 
-//hey lukas de tre herover fucker med faq siden.
 function medal1Event() {
   if(medalText1.style.display == "none"){
     medalText1.style.display = "block";
@@ -80,101 +78,102 @@ function medal3Event() {
 
 
 //Nikolajs js starter her
-document.addEventListener('DOMContentLoaded', function () {
-    const button = document.querySelector('.contact__form button');
-    const form = document.getElementById('kontaktForm');
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('.contact__form button');
+  const form = document.getElementById('kontaktForm');
+
+  if (!button || !form) return;
+
+  // send besked
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Din besked er blevet sendt!');
+    form.reset();
+  });
+
   
-    if (!button) return;
+  const originalStyles = {
+    backgroundColor: button.style.backgroundColor || '#662483',
+    color: button.style.color || '#ffffff'
+  };
+
+  // Hover
+  button.addEventListener('mouseenter', () => {
+    button.style.transition = 'background-color 0.2s ease-out';
+    button.style.backgroundColor = '#9d3bc7';
+    button.style.color = '#ffffff';
+  });
+
+  button.addEventListener('mouseleave', () => {
+    button.style.backgroundColor = originalStyles.backgroundColor;
+    button.style.color = originalStyles.color;
+  });
+
+  // Active 
+  button.addEventListener('mousedown', () => {
+    button.style.backgroundColor = '#ffffff';
+    button.style.color = '#9d3bc7';
+  });
+
   
-    // send form event
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Din besked er blevet sendt!');
-      });
-    }
-  
-    // Hover
-    button.addEventListener('mouseenter', function () {
-      button.style.transition = 'background-color 0.2s ease-out';
+  button.addEventListener('mouseup', () => {
+    if (button.matches(':hover')) {
       button.style.backgroundColor = '#9d3bc7';
       button.style.color = '#ffffff';
-    });
-  
-    button.addEventListener('mouseleave', function () {
-      button.style.backgroundColor = '#662483';
-      button.style.color = '#ffffff';
-    });
-  
-    // Active
-    button.addEventListener('mousedown', function () {
-      button.style.backgroundColor = '#ffffff';
-      button.style.color = '#9d3bc7';
-    });
-  
-    button.addEventListener('mouseup', function () {
-      if (button.matches(':hover')) {
-        button.style.backgroundColor = '#9d3bc7';
-        button.style.color = '#ffffff';
-      } else {
-        button.style.backgroundColor = '#662483';
-        button.style.color = '#ffffff';
-      }
-    });
-  
-    button.addEventListener('focus', function () {
-      button.style.outline = 'none';
-    });
+    } else {
+      button.style.backgroundColor = originalStyles.backgroundColor;
+      button.style.color = originalStyles.color;
+    }
   });
+
+  button.addEventListener('focus', () => {
+    button.style.outline = 'none';
+  });
+});
+
   
   
   
   // FAQ
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('DOMContentLoaded', () => {
     // Array
     const faqData = [
       {
         question: "Hvem er Kirkens Korshær?",
-        answer: "vi er en velgørenheds organisation som hjælpe folk med at finde et varmt sted at sove og en god omgang mad, samt er vi ambassadøre for genbrug."
+        answer: "Vi er en velgørenhedsorganisation, som hjælper folk med at finde et varmt sted at sove og et godt måltid mad. Vi er også ambassadører for genbrug."
       },
       {
-        question: "hvordan tjener jeg points?",
-        answer: "du kan tjene points ved at mælde dig friviligt til en af de mange opgaver på job siden."
+        question: "Hvordan tjener jeg point?",
+        answer: "Du kan tjene point ved at melde dig frivilligt til en af de mange opgaver på job-siden."
       },
       {
-        question: "chicken?",
+        question: "Chicken?",
         answer: "Jockey!!!"
       }
     ];
+  // Loop
+    const faqContainer = document.getElementById('faq');
+    if (!faqContainer) return;
   
-    const faqContainer = document.getElementById("faq");
-    if (!faqContainer) return; 
+    faqData.forEach(({ question, answer }) => {
+      const questionDiv = document.createElement('div');
+      questionDiv.className = 'faq-question';
+      questionDiv.textContent = question;
   
-    // Loop
-    for (let i = 0; i < faqData.length; i++) {
-      const item = faqData[i];
+      const answerDiv = document.createElement('div');
+      answerDiv.className = 'faq-answer';
+      answerDiv.textContent = answer;
+      answerDiv.style.display = 'none';
   
-      const questionDiv = document.createElement("div");
-      questionDiv.className = "faq-question";
-      questionDiv.textContent = item.question;
-  
-      const answerDiv = document.createElement("div");
-      answerDiv.className = "faq-answer";
-      answerDiv.textContent = item.answer;
-  
-      questionDiv.addEventListener("click", function () {
-        if (answerDiv.style.display === "none" || answerDiv.style.display === "") {
-          answerDiv.style.display = "block";
-        } else {
-          answerDiv.style.display = "none";
-        }
+      questionDiv.addEventListener('click', () => {
+        const isVisible = answerDiv.style.display === 'block';
+        answerDiv.style.display = isVisible ? 'none' : 'block';
       });
   
       faqContainer.appendChild(questionDiv);
       faqContainer.appendChild(answerDiv);
-    }
+    });
   });
-
 
 //nikolajs js slutter her
 

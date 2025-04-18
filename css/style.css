@@ -324,6 +324,11 @@ input {
     line-height: 1.4;
 }
 
+.card-link {
+    text-decoration: none;
+    display: block;
+  }
+
 /* Nye styles til detaljesiden */
 
 .details-container {

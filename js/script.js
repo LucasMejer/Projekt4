@@ -29,6 +29,11 @@ const menuItems = [
       link: "Kontakt.html"
     },
     {
+      displayName: "Chat rum",
+      link: "chatrum.html"
+    },
+    
+    {
         displayName: "Profil",
         link: "profile.html"
     },
@@ -301,19 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
   setupChat();
 });
 
-    // Back Button funktionalitet
-    const backButton = document.querySelector('.chat__back-button');
-    if (backButton) {
-        backButton.addEventListener('click', function() {
-            // While loop eksempel
-            let counter = 3;
-            while (counter > 0) {
-                console.log(`Returnerer tilbage om ${counter} sekunder`);
-                counter--;
-            }
-            window.history.back();
-        });
-    }
 // Long JS slutter her //
 
 // Johannes JS starte her //

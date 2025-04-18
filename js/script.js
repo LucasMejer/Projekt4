@@ -318,6 +318,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Johannes JS starte her //
 
+// JS til log in side //
+
 // DOM elementer (Variabler og typer)
 const loginForm = document.querySelector('.login-form');
 const emailInput = document.querySelector('input[type="text"]');

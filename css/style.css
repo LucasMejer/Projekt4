@@ -5,7 +5,8 @@
     --main-bg-color: #ffffff;
     --secondary-bg-color: #242424;
     --main-text-color: #000000;
-    --main-text-font: sans-serif;
+    --main-text-font: "Inria Sans", sans-serif;
+    
       
 }
 
@@ -13,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Inria Sans", sans-serif;
 }
 
 body {
